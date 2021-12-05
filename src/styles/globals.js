@@ -3,6 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: 'Tinsel';
+    src: url('/tinsel-regular.otf') format('truetype');
+  }
   * {
     margin: 0;
     padding: 0;
@@ -23,6 +27,7 @@ export default createGlobalStyle`
   body {
     background: ${props => props.theme.background};
     font: 400 1rem 'Montserrat', sans-serif;
+    overflow-x: hidden;
   }
   img {
     width: 100%;

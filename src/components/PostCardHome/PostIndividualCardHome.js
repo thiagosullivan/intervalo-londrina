@@ -1,9 +1,25 @@
-import { IndividualCardContainer } from './styles';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ImgPost, IndividualCardContainer } from './styles';
 
-function PostIndividualCardHome() {
+function PostIndividualCardHome({ author, date, category, title, imgLink, resume, postLink }) {
   return (
     <IndividualCardContainer>
-
+      <div className="card_first_info">
+        <div className="post_infos">
+          <span className="author_post">Por {author}</span>
+          <span className="date_post">{date}</span>
+          <span className="category_post">{category}</span>
+        </div>
+        <h3 className="post_title">{title}</h3>
+      </div>
+      <ImgPost className="post_img" imgUrl={imgLink} />
+      <div className="card_second_info">
+        <p className="post_resume">{resume}</p>
+        <Link href={postLink}>
+          <a><span>Ler mais</span></a>
+        </Link>
+      </div>
     </IndividualCardContainer>
   )
 }

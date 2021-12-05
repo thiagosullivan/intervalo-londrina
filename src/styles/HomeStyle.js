@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
   position: relative;
 
   .home_subtitle {
-    margin-top: 4.5rem;
+    margin-top: 4.5rem;    
     display: flex;
     justify-content: space-between;
     align-items: center;
