@@ -3,8 +3,10 @@ import Image from 'next/image';
 import BackgroundImg from '../components/BgSite';
 import SideLine from '../components/BgSite/SideLine';
 import CategoriesPosts from '../components/CategoriesPosts';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import LogoSite from '../components/LogoSite';
+import Newsletter from '../components/Newsletter';
 import PostCardHome from '../components/PostCardHome';
 
 import TitleAbout from '../components/TitleAbout';
@@ -33,8 +35,10 @@ export default function Home() {
             <div className="sub_line"></div>
           </div>
           <PostCardHome />
+          <Newsletter />
         </main>
       </HomeContainer>
+      <Footer />
     </>
   )
 }
