@@ -11,6 +11,8 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 5rem 0;
   position: fixed;
+  z-index: 2;
+  box-shadow: 1px 3px 5px rgba(0,0,0,.2);
   
   h1 {
     color: red;
@@ -49,5 +51,21 @@ export const NavLinkContainer = styled.nav`
     &:hover {
       transform: scale(1.05)
     }
+  }
+`;
+
+export const SideBarContainer = styled.div`
+  background: ${({ theme }) => theme.primary};
+  width: 80px;
+  height: 100vh;
+  padding-top: 30px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+  > svg {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 300;
   }
 `;
