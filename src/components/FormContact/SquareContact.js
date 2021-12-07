@@ -15,7 +15,7 @@ function SquareContact() {
       </div>
       <div className="contact_phone">
         <ImPhone />
-        <p>contato@intervalolondrina.com.br</p>
+        <p>&#40;43&#41; 99999-9999</p>
       </div>
     </SquareContactContainer>
   )
