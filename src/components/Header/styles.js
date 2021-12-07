@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+  .active {
+    transform: translateX(0px) !important;
+  }
+`;
+
+export const NavContainer = styled.nav`
   background: ${({ theme }) => theme.primary};
   height: 100vh;
   max-width: 400px;
@@ -13,9 +19,20 @@ export const HeaderContainer = styled.header`
   position: fixed;
   z-index: 2;
   box-shadow: 1px 3px 5px rgba(0,0,0,.2);
+  transform: translateX(-400px);
+  transition: all 200ms ease-in-out;
   
   h1 {
     color: red;
+  }
+
+  .close_header {
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   .header_cont_one {
@@ -62,6 +79,7 @@ export const SideBarContainer = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 
   > svg {
     color: #ffffff;

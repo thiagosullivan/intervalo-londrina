@@ -1,19 +1,21 @@
 import PostIndividualCardHome from './PostIndividualCardHome';
 import { PostsHomeContainer } from './styles';
 
-function PostCardHome() {
+function PostCardHome({ postagens }) {
   return (
     <PostsHomeContainer>
-      <PostIndividualCardHome
-        author="Isabela"
-        date="17/11/2021"
-        category="Cinema"
-        title="Duas Visões sobre a figura feminina no espaço do ateliê em 1994"
-        imgLink="https://i.ibb.co/Js8QHjG/Your-image-here.png"
-        resume="Almeida Júnior e Abigail de Andrade: duas visões sobre a figura feminina no espaço do ateliê. Ambas apresentadas com sucesso na Exposição Geral de Belas Artes de 1884."
-        postLink="/sobre"
-      />
-      <PostIndividualCardHome
+      {postagens.slice( 0, 4 ).map( posts => 
+        <PostIndividualCardHome
+          author={posts.author}
+          date={posts.date}
+          category={posts.category}
+          title={posts.title}
+          imgLink={posts.image}
+          resume="Almeida Júnior e Abigail de Andrade: duas visões sobre a figura feminina no espaço do ateliê. Ambas apresentadas com sucesso na Exposição Geral de Belas Artes de 1884."
+          postLink={posts.slug}
+        />
+      )}
+      {/* <PostIndividualCardHome
         author="Ana"
         date="18/11/2021"
         category="Musica"
@@ -39,7 +41,7 @@ function PostCardHome() {
         imgLink="https://i.ibb.co/4dMBQv4/Your-image-here-4.png"
         resume="Almeida Júnior e Abigail de Andrade: duas visões sobre a figura feminina no espaço do ateliê. Ambas apresentadas com sucesso na Exposição Geral de Belas Artes de 1884."
         postLink="/sobre"
-      />
+      /> */}
     </PostsHomeContainer>
   )
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SeeMoreContainer = styled.section`
   border-left: 2px solid ${({ theme }) => theme.secondary};
-  padding-left: 4.6rem;
+  padding-left: 3.6rem;
   margin-bottom: 9.6rem;
   
   h3 {

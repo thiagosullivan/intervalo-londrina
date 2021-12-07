@@ -1,20 +1,21 @@
+import Prismic from '@prismicio/client';
 import Head from 'next/head';
-import Image from 'next/image';
+import { GetStaticProps } from "next";
+
 import BackgroundImg from '../components/BgSite';
 import SideLine from '../components/BgSite/SideLine';
 import CategoriesPosts from '../components/CategoriesPosts';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import SideBar from '../components/Header/SideBar';
-import LogoSite from '../components/LogoSite';
 import Newsletter from '../components/Newsletter';
 import PostCardHome from '../components/PostCardHome';
-
-import TitleAbout from '../components/TitleAbout';
 import TopHead from '../components/TopHead';
-import { HomeContainer } from '../styles/HomeStyle';
 
-export default function Home() {
+import { HomeContainer } from '../styles/HomeStyle';
+import { getPrismicClient } from './services/prismic';
+
+export default function Home({ postagens }) {
+  console.log(postagens)
   return (
     <div id="homepage">
       <Head>
@@ -23,8 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SideBar />
-      {/* <Header /> */}
+      <Header />
       <BackgroundImg />
       <SideLine />
       <HomeContainer>
@@ -36,11 +36,38 @@ export default function Home() {
             <h1>Últimos Posts</h1>
             <div className="sub_line"></div>
           </div>
-          <PostCardHome />
+          <PostCardHome postagens={postagens} />
           <Newsletter />
         </main>
       </HomeContainer>
       <Footer />
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const projectResponse = await prismic.query(
+    [Prismic.Predicates.at('document.type', 'postagem')],
+    { orderings: '[document.first_publication_date desc]'}
+  );
+  
+  const postagens = projectResponse.results.map(post => ({
+      id: post.id,
+      slug: post.uid,
+      date: post.data.date,
+      title: post.data.title,
+      author: post.data.author,
+      category: post.data.categories,
+      text: post.data.text,
+      image: post.data.image.url,
+    }));
+    
+    console.log(postagens)
+  return {
+    props: {
+      postagens
+    }
+  }
 }

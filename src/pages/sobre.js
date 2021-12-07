@@ -1,14 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import BackgroundImg from '../components/BgSite'
 import SideLine from '../components/BgSite/SideLine'
 import Footer from '../components/Footer'
-import ContactContent from '../components/FormContact'
-import SideBar from '../components/Header/SideBar'
+import Header from '../components/Header'
 import Newsletter from '../components/Newsletter'
 import TheAuthor from '../components/TheAuthor'
 import TheProject from '../components/TheProject'
 import TopHead from '../components/TopHead'
+
 import { HomeContainer } from '../styles/HomeStyle'
 
 export default function Home() {
@@ -20,8 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SideBar />
-      {/* <Header /> */}
+      <Header />
       <BackgroundImg />
       <SideLine />
       <HomeContainer>

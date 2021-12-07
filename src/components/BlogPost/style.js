@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const BlogPostContainer = styled.section`
   max-width: 815px;
-  width: 100%;
-  padding-right: 4.6rem;
+  width: max-content;
+  /* padding-right: 4.6rem; */
   margin-bottom: 9.5rem;
+
+  .blog_post_img {
+    margin: 0 auto;
+  }
 
   > h1 {
     font-family: 'Tinsel', sans-serif;

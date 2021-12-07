@@ -1,10 +1,15 @@
+import Link from 'next/link';
 import { ButtonContegoryContainer } from './style';
 
-function ButtonCategories({ name }) {
+function ButtonCategories({ name, path }) {
   return (
-    <ButtonContegoryContainer>
-      <span>{name}</span>
-    </ButtonContegoryContainer>
+    <Link href={`/blog/${path}`}>
+      <a>
+        <ButtonContegoryContainer>
+          <span>{name}</span>
+        </ButtonContegoryContainer>
+      </a>
+    </Link>
   )
 }
 

@@ -1,15 +1,17 @@
 import Head from "next/head";
+
 import BackgroundImg from "../../../components/BgSite";
 import SideLine from "../../../components/BgSite/SideLine";
 import Footer from "../../../components/Footer";
-import SideBar from "../../../components/Header/SideBar";
 import Newsletter from "../../../components/Newsletter";
 import TopHead from "../../../components/TopHead";
 import CategoriesPosts from '../../../components/CategoriesPosts';
-import { HomeContainer } from '../../../styles/HomeStyle';
-import { BlogPostContent } from "../../../styles/PostStyle";
 import BlogPost from "../../../components/BlogPost";
 import SeeMore from "../../../components/SeeMore";
+import Header from "../../../components/Header";
+
+import { HomeContainer } from '../../../styles/HomeStyle';
+import { BlogPostContent } from "../../../styles/PostStyle";
 
 function Postagem() {
   return (
@@ -20,8 +22,7 @@ function Postagem() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SideBar />
-      {/* <Header /> */}
+      <Header />
       <BackgroundImg />
       <SideLine />
       <HomeContainer>

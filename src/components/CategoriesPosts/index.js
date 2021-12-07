@@ -4,12 +4,12 @@ import { CategoriesPostsContainer } from './style';
 function CategoriesPosts() {
   return (
     <CategoriesPostsContainer>
-      <ButtonCategories name="Cinema" />
-      <ButtonCategories name="Dança" />
-      <ButtonCategories name="Literatura" />
-      <ButtonCategories name="Música" />
-      <ButtonCategories name="Teatro" />
-      <ButtonCategories name="#Periféricos" />
+      <ButtonCategories name="Cinema" path="Cinema" />
+      <ButtonCategories name="Dança" path="danca" />
+      <ButtonCategories name="Literatura" path="literatura" />
+      <ButtonCategories name="Música" path="musica" />
+      <ButtonCategories name="Teatro" path="teatro" />
+      <ButtonCategories name="#Periféricos" path="perifericos" />
     </CategoriesPostsContainer>
   )
 }
