@@ -21,7 +21,7 @@ function Header(){
         <div className="close_header" onClick={showSidebar}>
           <MdOutlineClose />
         </div>
-        <Image src={LogoLight}/>
+        <Image src={LogoLight} alt="Logo da Intervalo"/>
           <ul onClick={showSidebar}>
             <NavLink title="Blog" path="/" />
             <NavLink title="Sobre" path="/sobre" includes />

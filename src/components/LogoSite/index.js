@@ -5,7 +5,7 @@ import Image from 'next/image';
 function LogoSite(){
   return (
     <LogoContainer>
-      <Image src={LogoDark} />
+      <Image src={LogoDark} alt="Logo da Intervalo" />
     </LogoContainer>
   )
 }

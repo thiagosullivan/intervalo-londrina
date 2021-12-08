@@ -8,11 +8,11 @@ function Footer() {
   return (
     <FooterContainer>
       <div className="footer_top">
-        <Image src={logoFooter} />
+        <Image src={logoFooter} alt="Logo da Intervalo" />
         <div className="footer_second_col">
           <div className="footer_prefeitura">
             <p>Patrocínio</p>
-            <Image src={logoPrefeitura} />
+            <Image src={logoPrefeitura} alt="Logo da Prefeitura de Londrina" />
           </div>
           <div className="footer_socialmedia">
             <p>Nossas redes</p>

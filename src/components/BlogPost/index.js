@@ -8,7 +8,7 @@ function BlogPost({ category }) {
   return (
     <BlogPostContainer>
       <div className="blog_post_img">
-        <Image src={postImg} width={815} height={300} />
+        <Image src={postImg} width={815} height={300} alt='Imagem da postagem' />
       </div>
       <BlogPostInfo category="Cinema" />
       <h1>Duas visões sobre a figura feminina no espaço do ateliê em 1884</h1>

@@ -8,7 +8,7 @@ function PostCardHome({ postagens }) {
     <PostsHomeContainer>
       {postagens.slice( 0, 4 ).map( (posts, index) => 
         <PostIndividualCardHome
-          key={index}
+          key={posts.id}
           author={posts.author}
           date={posts.date}
           category={posts.category}

@@ -10,7 +10,7 @@ function TheProject() {
           <div className="project_border" />
           <h2>O<br/> <span>Projeto</span></h2>
         </div>
-        <Image src={firstPhoto} width={754} height={617}/>
+        <Image src={firstPhoto} width={754} height={617} alt="Foto ilustrativa"/>
       </div>
       <div className="project_text">
         <p>A música Construção, de Chico Buarque, é um grande manifesto poético e político da música popular brasileira. O jogo de palavras e a temática proposta pela canção tornam-a um marco do cenário musical brasileiro da década de 1970. Chico Buarque, com então 27 anos de idade, atingiu a muitos públicos com a música, agradando a diferentes gostos durante um período de intensa censura e tensão política na ditadura militar. Com Chico Buarque, Construção atingiu o topo das paradas nas rádios de todo o país e atravessou gerações, sendo uma música de grande relevância e prestigiada até os dias de hoje!

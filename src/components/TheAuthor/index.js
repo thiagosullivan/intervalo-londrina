@@ -6,7 +6,7 @@ function TheAuthor() {
   return (
     <TheAuthorContainer>
       <div className="author_img_container">
-        <Image src={Author} width={345} height={345} />
+        <Image src={Author} width={345} height={345} alt="Foto da Isabela" />
       </div>
       <div className="author_text_container">
         <h2>A <span>Autora</span></h2>
