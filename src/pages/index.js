@@ -12,7 +12,8 @@ import PostCardHome from '../components/PostCardHome';
 import TopHead from '../components/TopHead';
 
 import { HomeContainer } from '../styles/HomeStyle';
-import { getPrismicClient } from './services/prismic';
+import { getPrismicClient } from '../services/prismic';
+// import { getPrismicClient } from './services/prismic';
 
 export default function Home({ postagens }) {
   console.log(postagens)
