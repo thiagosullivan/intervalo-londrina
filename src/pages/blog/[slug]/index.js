@@ -16,7 +16,7 @@ import { BlogPostContent } from "../../../styles/PostStyle";
 import { getPrismicClient } from "../../../services/prismic";
 
 function Postagem({ post }) {
-  
+
   return (
     <div id="contato">
       <Head>
@@ -33,7 +33,14 @@ function Postagem({ post }) {
           <TopHead />
           <CategoriesPosts />
           <BlogPostContent>
-            <BlogPost post={post}/>
+            <BlogPost
+              title={post.title}
+              categories={post.categories}
+              date={post.date}
+              author={post.author}
+              text={post.text}
+              imgUrl={post.image}
+            />
             <SeeMore />
           </BlogPostContent>
           <Newsletter />
