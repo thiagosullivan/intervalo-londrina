@@ -14,8 +14,16 @@ import Header from "../../../components/Header";
 import { HomeContainer } from '../../../styles/HomeStyle';
 import { BlogPostContent } from "../../../styles/PostStyle";
 import { getPrismicClient } from "../../../services/prismic";
+import LoadingScreen from "../../../components/LoadingScreen";
+import { useRouter } from "next/router";
 
 function Postagem({ post }) {
+
+  const router = useRouter();
+
+  if(router.isFallback) {
+    return <LoadingScreen />
+  }
 
   return (
     <div id="contato">
@@ -34,7 +42,7 @@ function Postagem({ post }) {
           <CategoriesPosts />
           <BlogPostContent>
             <BlogPost
-              title={post.title}
+              postTitle={post.title}
               categories={post.categories}
               date={post.date}
               author={post.author}
