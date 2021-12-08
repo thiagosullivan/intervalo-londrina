@@ -89,7 +89,7 @@ export const getStaticProps = async () => {
   
   const postagens = projectResponse.results.map(post => ({
       id: post.id,
-      slug: post.uid,
+      slug: post.slugs,
       date: post.data.date,
       title: post.data.title,
       author: post.data.author,

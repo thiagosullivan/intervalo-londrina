@@ -68,18 +68,6 @@ export const getStaticProps = async context => {
   const { slug } = context.params
 
   const response = await prismic.getByUID('postagem', String(slug), {});
-  
-  // const postagens = projectResponse.results.map(post => ({
-  //     id: post.id,
-  //     slug: post.uid,
-  //     date: post.data.date,
-  //     title: post.data.title,
-  //     author: post.data.author,
-  //     category: post.data.categories,
-  //     resume: post.data.resume,
-  //     text: post.data.text,
-  //     image: post.data.image.url,
-  //   }));
 
   const post = {
     slug: response.slugs,
@@ -88,6 +76,7 @@ export const getStaticProps = async context => {
     date: response.data.date,
     categories: response.data.categories,
     image: response.data.image.url,
+    alt: response.data.image.alt,
     text: response.data.text,
   }
     

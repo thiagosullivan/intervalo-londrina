@@ -12,7 +12,7 @@ function BlogPost({ post }) {
         {/* <Image src={post.image} layout="fixed" alt='Imagem da postagem' /> */}
       </div>
       <PostImageContainer imgUrl={post.image} />
-      <BlogPostInfo category={post.categories} />
+      <BlogPostInfo category={post.categories} date={post.date} author={post.author}/>
       <h1>{post.title}</h1>
       {RichText.render(post.text)}
     </BlogPostContainer>
