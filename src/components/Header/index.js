@@ -14,9 +14,9 @@ function Header(){
 
   return (
     <HeaderContainer>
-      <SideBarContainer onClick={showSidebar}>
+      <div className="sidebar_container" onClick={showSidebar}>
         <GiHamburgerMenu />
-      </SideBarContainer>
+      </div>
       <NavContainer className={sidebar ? 'active' : ''}>
         <div className="close_header" onClick={showSidebar}>
           <MdOutlineClose />

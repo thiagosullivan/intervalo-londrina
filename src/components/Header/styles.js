@@ -4,6 +4,24 @@ export const HeaderContainer = styled.header`
   .active {
     transform: translateX(0px) !important;
   }
+
+  .sidebar_container {
+    background: ${({ theme }) => theme.primary};
+    width: 80px;
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+  
+    > svg {
+      color: #ffffff;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+  }
 `;
 
 export const NavContainer = styled.nav`
@@ -53,7 +71,7 @@ export const NavContainer = styled.nav`
   }
 `;
 
-export const NavLinkContainer = styled.nav`
+export const NavLinkContainer = styled.div`
   display: flex;
   
   a {
@@ -72,19 +90,5 @@ export const NavLinkContainer = styled.nav`
 `;
 
 export const SideBarContainer = styled.div`
-  background: ${({ theme }) => theme.primary};
-  width: 80px;
-  height: 100vh;
-  padding-top: 30px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1;
-
-  > svg {
-    color: #ffffff;
-    font-size: 3rem;
-    font-weight: 300;
-  }
+  
 `;
