@@ -57,4 +57,15 @@ export default createGlobalStyle`
 
     }
   }
+
+  #post_page ul {
+    list-style: disc;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  #post_page ol {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
 `;
