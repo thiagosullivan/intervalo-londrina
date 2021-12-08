@@ -2,17 +2,21 @@ import PostIndividualCardHome from './PostIndividualCardHome';
 import { PostsHomeContainer } from './styles';
 
 function PostCardHome({ postagens }) {
+
+  // const filterdPeople = postagens.filter(posts => posts.category == 'Dança')
   return (
     <PostsHomeContainer>
-      {postagens.slice( 0, 4 ).map( posts => 
+      {postagens.slice( 0, 4 ).map( (posts, index) => 
         <PostIndividualCardHome
+          key={index}
           author={posts.author}
           date={posts.date}
           category={posts.category}
           title={posts.title}
           imgLink={posts.image}
-          resume="Almeida Júnior e Abigail de Andrade: duas visões sobre a figura feminina no espaço do ateliê. Ambas apresentadas com sucesso na Exposição Geral de Belas Artes de 1884."
+          resume={posts.resume}
           postLink={posts.slug}
+          text={posts.text}
         />
       )}
       {/* <PostIndividualCardHome

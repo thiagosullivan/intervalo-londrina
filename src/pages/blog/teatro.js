@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Prismic from '@prismicio/client';
 
 import BackgroundImg from '../../components/BgSite';
 import SideLine from '../../components/BgSite/SideLine';
@@ -7,11 +8,17 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Newsletter from '../../components/Newsletter';
 import PostCardHome from '../../components/PostCardHome';
+import PostIndividualCardHome from '../../components/PostCardHome/PostIndividualCardHome';
 import TopHead from '../../components/TopHead';
 
 import { HomeContainer } from '../../styles/HomeStyle';
+import { getPrismicClient } from '../services/prismic';
+import { PostsHomeContainerIndividual } from '../../styles/CategoriesPages';
 
-function Cinema() {
+function Teatro({ postagens }) {
+
+  const filterdCategory = postagens.filter(posts => posts.category == 'Cinema')
+
   return (
     <div id="homepage">
       <Head>
@@ -32,7 +39,31 @@ function Cinema() {
             <h1>Últimos Posts</h1>
             <div className="sub_line"></div>
           </div>
-          <PostCardHome />
+
+          <PostsHomeContainerIndividual postagens={postagens}>
+            {filterdCategory.length > 0 &&
+              <PostsHomeContainerIndividual postagens={postagens}>
+                {filterdCategory.slice( 0, 4 ).map( (posts, index) => 
+                  <PostIndividualCardHome
+                    key={index}
+                    author={posts.author}
+                    date={posts.date}
+                    category={posts.category}
+                    title={posts.title}
+                    imgLink={posts.image}
+                    resume={posts.resume}
+                    postLink={posts.slug}
+                    text={posts.text}
+                  />
+                )}
+              </PostsHomeContainerIndividual>
+            }
+            {filterdCategory.length <= 0 &&
+              <NoPostYet />
+            }        
+          </PostsHomeContainerIndividual>
+
+          {/* <PostCardHome /> */}
           <Newsletter />
         </main>
       </HomeContainer>
@@ -41,4 +72,34 @@ function Cinema() {
   )
 }
 
-export default Cinema;
+export default Teatro;
+
+export const getStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const projectResponse = await prismic.query(
+    [Prismic.Predicates.at('document.type', 'postagem')],
+    { orderings: '[document.first_publication_date desc]'}
+  );
+  
+  const postagens = projectResponse.results.map(post => ({
+      id: post.id,
+      slug: post.uid,
+      date: post.data.date,
+      title: post.data.title,
+      author: post.data.author,
+      category: post.data.categories,
+      resume: post.data.resume,
+      text: post.data.text,
+      image: post.data.image.url,
+    }));
+    
+    console.log(postagens)
+
+  return {
+    props: {
+      postagens
+    },
+    revalidate: 86400
+  };
+}

@@ -60,14 +60,17 @@ export const getStaticProps = async () => {
       title: post.data.title,
       author: post.data.author,
       category: post.data.categories,
+      resume: post.data.resume,
       text: post.data.text,
       image: post.data.image.url,
     }));
     
     console.log(postagens)
+
   return {
     props: {
       postagens
-    }
-  }
+    },
+    revalidate: 86400
+  };
 }
