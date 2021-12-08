@@ -6,12 +6,6 @@ export const CategoriesPostsContainer = styled.div`
   margin-top: 15rem;
 `;
 
-export const ButtonCategories = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const ButtonContegoryContainer = styled.button`
   margin: 0 1.4rem;
   padding: 0.6rem 2.75rem;
