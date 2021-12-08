@@ -17,7 +17,7 @@ function PostIndividualCardHome({ author, date, category, title, imgLink, resume
       <ImgPost className="post_img" imgUrl={imgLink} />
       <div className="card_second_info">
         <p className="post_resume">{resume.length > 180 ? resume.substr(0, 150) + "..." : resume}</p>
-        {/* {RichText.render(text)} */}
+        {/* {RichText.render(text)} */} 
         <Link href={`/blog/${postLink}`}>
           <a><span>Ler mais</span></a>
         </Link>
