@@ -15,6 +15,8 @@ import { HomeContainer } from '../../styles/HomeStyle';
 import { getPrismicClient } from '../services/prismic';
 import { PostsHomeContainerIndividual } from '../../styles/CategoriesPages';
 
+import NoPostYet from '../../components/NoPostYet';
+
 function Musica({ postagens }) {
 
   const filterdCategory = postagens.filter(posts => posts.category == 'Cinema')
