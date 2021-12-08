@@ -4,7 +4,7 @@ import { CategoriesPostsContainer } from './style';
 function CategoriesPosts() {
   return (
     <CategoriesPostsContainer>
-      <ButtonCategories name="Cinema" path="Cinema" />
+      <ButtonCategories name="Cinema" path="cinema" />
       <ButtonCategories name="Dança" path="danca" />
       <ButtonCategories name="Literatura" path="literatura" />
       <ButtonCategories name="Música" path="musica" />

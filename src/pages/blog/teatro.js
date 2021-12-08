@@ -12,14 +12,14 @@ import PostIndividualCardHome from '../../components/PostCardHome/PostIndividual
 import TopHead from '../../components/TopHead';
 
 import { HomeContainer } from '../../styles/HomeStyle';
-import { getPrismicClient } from '../services/prismic';
+import { getPrismicClient } from '../../services/prismic';
 import { PostsHomeContainerIndividual } from '../../styles/CategoriesPages';
 
 import NoPostYet from '../../components/NoPostYet';
 
 function Teatro({ postagens }) {
 
-  const filterdCategory = postagens.filter(posts => posts.category == 'Cinema')
+  const filterdCategory = postagens.filter(posts => posts.category == 'Teatro')
 
   return (
     <div id="homepage">
