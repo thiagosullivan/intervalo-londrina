@@ -5,14 +5,14 @@ import BlogPostInfo from "../BlogPostInfo";
 import {RichText} from 'prismic-reactjs';
 
 
-function BlogPost({ title, categories, date, author, text, imgUrl }) {
+function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
   return (
     <BlogPostContainer>
       <div className="blog_post_img">
       </div>
       <PostImageContainer imgUrl={imgUrl} />
       <BlogPostInfo category={categories} date={date} author={author}/>
-      <h1>{title}</h1>
+      <h1>{postTitle}</h1>
       {RichText.render(text)}
     </BlogPostContainer>
   )
