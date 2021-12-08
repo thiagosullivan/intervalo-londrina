@@ -80,6 +80,7 @@ export const SideBarContainer = styled.div`
   display: flex;
   justify-content: center;
   cursor: pointer;
+  z-index: 1;
 
   > svg {
     color: #ffffff;

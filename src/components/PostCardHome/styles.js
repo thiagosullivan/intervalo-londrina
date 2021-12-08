@@ -2,6 +2,78 @@ import styled from "styled-components";
 
 export const PostsHomeContainer = styled.div`
 
+  .paginationBtns {
+    display: flex;
+    justify-content: center;
+    margin: 2.8rem 0 8.5rem;
+
+    .previousBtn {
+      border: none !important;
+      margin-right: -5px !important;
+
+      a {
+        border: none;
+        font-size: 25px;
+      }
+
+      &:hover {        
+        a {
+          background: transparent !important;
+          color: ${({ theme }) => theme.primary};
+        }
+      }
+    }
+
+    .next {
+      border: none !important;
+      margin-left: -5px !important;
+      
+      a {
+        border: none;
+        font-size: 25px;
+      }
+
+      &:hover {
+        
+        a {
+          background: transparent !important;
+          color: ${({ theme }) => theme.primary};
+        }
+      }
+    }
+
+    .paginationActive {
+      
+      a {
+        background: ${({ theme }) => theme.primary};
+        height: 32px;
+        width: 32px;
+        color: #ffffff;
+      }
+    }
+
+    li {
+      
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+        width: 32px;
+        border: 1px solid ${({ theme }) => theme.primary};
+        margin: 0 1rem;
+        cursor: pointer;
+        color: ${({ theme }) => theme.primary};
+        font-size: 16px;
+
+        &:hover {
+          background: ${({ theme }) => theme.primary};
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  
 `;
 
 export const IndividualCardContainer = styled.div`

@@ -1,12 +1,41 @@
+import { useState } from 'react';
 import PostIndividualCardHome from './PostIndividualCardHome';
 import { PostsHomeContainer } from './styles';
+import ReactPaginate from 'react-paginate';
+import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 
 function PostCardHome({ postagens }) {
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const usersPerPage = 4;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const displayUsers = postagens.slice(pagesVisited, pagesVisited + usersPerPage).map((posts) => {
+    return (
+      <PostIndividualCardHome
+          key={posts.id}
+          author={posts.author}
+          date={posts.date}
+          category={posts.category}
+          title={posts.title}
+          imgLink={posts.image}
+          resume={posts.resume}
+          postLink={posts.slug}
+          text={posts.text}
+        />
+    )
+  })
+
+  const pageCount = Math.ceil(postagens.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected)
+  }
 
   // const filterdPeople = postagens.filter(posts => posts.category == 'Dança')
   return (
     <PostsHomeContainer>
-      {postagens.slice( 0, 4 ).map( (posts, index) => 
+      {/* {postagens.slice( 0, 4 ).map( (posts, index) => 
         <PostIndividualCardHome
           key={posts.id}
           author={posts.author}
@@ -18,34 +47,19 @@ function PostCardHome({ postagens }) {
           postLink={posts.slug}
           text={posts.text}
         />
-      )}
-      {/* <PostIndividualCardHome
-        author="Ana"
-        date="18/11/2021"
-        category="Musica"
-        title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-        imgLink="https://i.ibb.co/4ghQCC6/Your-image-here-2.png"
-        resume="Nam eget velit arcu. Integer congue libero vel nibh sollicitudin placerat non vitae sem. Suspendisse vel odio ut diam sagittis tristique a vel nisi. Suspendisse viverra feugiat nisi id consectetur."
-        postLink="/sobre"
+      )}       */}
+      {displayUsers}
+      <ReactPaginate
+        previousLabel={<MdArrowBackIos />}
+        nextLabel={<MdArrowForwardIos />}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBtns"}
+        previousClassName={"previousBtn"}
+        nextLinkClassName={"nextBtn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
       />
-      <PostIndividualCardHome
-        author="Thiago"
-        date="20/11/2021"
-        category="Esportes"
-        title="In tortor eros, ullamcorper maximus vehicula id, varius nec felis. Maecenas vestibulum bibendum turpis, in interdum sapien condimentum vel. Sed."
-        imgLink="https://i.ibb.co/Bz4vbQH/Your-image-here-3.png"
-        resume="Almeida Júnior e Abigail de Andrade: duas visões sobre a figura feminina no espaço do ateliê. Ambas apresentadas com sucesso na Exposição Geral de Belas Artes de 1884."
-        postLink="/sobre"
-      />
-      <PostIndividualCardHome
-        author="Isabela"
-        date="17/11/2021"
-        category="Literatura"
-        title="Phasellus in congue nibh. Maecenas rhoncus purus tellus, nec sollicitudin magna ornare."
-        imgLink="https://i.ibb.co/4dMBQv4/Your-image-here-4.png"
-        resume="Almeida Júnior e Abigail de Andrade: duas visões sobre a figura feminina no espaço do ateliê. Ambas apresentadas com sucesso na Exposição Geral de Belas Artes de 1884."
-        postLink="/sobre"
-      /> */}
     </PostsHomeContainer>
   )
 }
