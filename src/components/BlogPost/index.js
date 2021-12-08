@@ -9,7 +9,6 @@ function BlogPost({ title, categories, date, author, text, imgUrl }) {
   return (
     <BlogPostContainer>
       <div className="blog_post_img">
-        {/* <Image src={post.image} layout="fixed" alt='Imagem da postagem' /> */}
       </div>
       <PostImageContainer imgUrl={imgUrl} />
       <BlogPostInfo category={categories} date={date} author={author}/>
