@@ -39,7 +39,7 @@ export const TheProjectContainer = styled.section`
           color: ${({ theme }) => theme.primary};
           -webkit-text-fill-color: transparent;
           /* -webkit-text-stroke-width: 2px; */
-          stroke-width: 2px;
+          /* stroke-width: 2px; */
         }
       }
     }
