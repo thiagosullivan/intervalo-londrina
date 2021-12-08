@@ -19,7 +19,7 @@ import NoPostYet from '../../components/NoPostYet';
 
 function Musica({ postagens }) {
 
-  const filterdCategory = postagens.filter(posts => posts.category == 'Cinema')
+  const filterdCategory = postagens.filter(posts => posts.category == 'Música')
 
   return (
     <div id="homepage">

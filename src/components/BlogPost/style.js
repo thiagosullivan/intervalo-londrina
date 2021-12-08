@@ -8,6 +8,8 @@ export const BlogPostContainer = styled.section`
 
   .blog_post_img {
     margin: 0 auto;
+    max-width: 815px;
+    width: 100%;
   }
 
   > h1 {
@@ -21,5 +23,15 @@ export const BlogPostContainer = styled.section`
   p {
     color: ${({ theme }) => theme.secondary};
     text-align: justify;
+    line-height: 24px;
+    margin-bottom: 1rem;
   }
+`;
+
+export const PostImageContainer = styled.div`
+  width: 815px;
+  height: 300px;
+  background-image: url(${props => props.imgUrl});
+  background-position: center;
+  background-size: cover;
 `;

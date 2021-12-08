@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PostsHomeContainer = styled.div`
+  transition: all 150ms ease-in;
 
   .paginationBtns {
     display: flex;
