@@ -7,11 +7,24 @@ export const NewsletterContainer = styled.section`
   justify-content: space-around;
   padding: 3.1rem 8.7rem;
 
+  @media (max-width: 1370px){
+    padding: 3.1rem;
+  }
+
+  @media (max-width: 980px){
+    flex-direction: column;
+    text-align: center;
+  }
+
   > p {
     font-family: 'Tinsel', sans-serif;
     font-size: 55px;
     font-weight: 500;
     color: #ffffff;
+
+    @media (max-width: 980px){
+      margin-bottom: 2rem;
+    }
   }
   
   > form {

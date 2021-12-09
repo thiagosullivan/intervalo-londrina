@@ -81,14 +81,26 @@ export const IndividualCardContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 0 3.7rem;
+  padding: 4rem 1rem 3.7rem;
   border-bottom: 1px solid ${({ theme }) => theme.greysecond};
+
+  @media (max-width: 980px){
+    flex-direction: column;
+  }
 
   .card_first_info {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     width: 100%;
+
+    @media (max-width: 1240px) {
+       max-width: 350px;
+    }
+
+    @media (max-width: 980px){
+      max-width: unset;
+    }
 
     .post_infos {
       display: grid;
@@ -99,6 +111,10 @@ export const IndividualCardContainer = styled.div`
       color: ${({ theme }) => theme.primary};
       font-size: 13px;
       font-weight: 500;
+
+      @media (max-width: 980px){
+        justify-content: center;
+      }
 
       .author_post {
         grid-area: author;
@@ -123,6 +139,10 @@ export const IndividualCardContainer = styled.div`
         padding: 0.3rem 2.5rem;
         width: fit-content;
         margin-top: 1.12rem;
+
+        @media (max-width: 980px){
+          width: 100%;
+        }
       }
     }
 
@@ -132,6 +152,11 @@ export const IndividualCardContainer = styled.div`
       color: ${({ theme }) => theme.secondary};
       font-weight: 500;
       margin-top: 1rem;
+
+      @media (max-width: 980px){
+        text-align: center;
+        margin-top: 2rem;
+      }
     }
   }
 
@@ -141,12 +166,25 @@ export const IndividualCardContainer = styled.div`
       font-size: 17px;
       color: ${({ theme }) => theme.secondary};
       margin-bottom: 1.8rem;
+
+      @media (max-width: 980px){
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 3rem;
+      }
+
     }
     a {      
       color: #ffffff;      
       border-top: 1px solid ${({ theme }) => theme.secondary};
       display: flex;
       width: 170px;
+
+      @media (max-width: 980px){
+        justify-content: center;
+        width: 100%;
+        border-top: none;
+      }
 
       span {
         background: ${({ theme }) => theme.primary};
@@ -168,6 +206,12 @@ export const IndividualCardContainer = styled.div`
 export const ImgPost = styled.div`
     background-image: url(${props => props.imgUrl});
     background-size: cover;
+    background-position: center;
     width: 390px;
     height: 300px;
+    margin: 0 2rem;
+
+    @media (max-width: 980px){
+      margin: 3rem;
+    }
 `;

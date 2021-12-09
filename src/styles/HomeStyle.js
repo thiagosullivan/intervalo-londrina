@@ -5,6 +5,19 @@ export const HomeContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   position: relative;
+  padding-left: 60px;
+
+  @media (max-width: 1500px){
+    max-width: 1300px;
+  }
+
+  @media (max-width: 1370px){
+    max-width: 1040px;
+  }
+
+  @media (max-width: 980px){
+    padding-left: 0px;
+  }
 
   .home_subtitle {
     margin-top: 4.5rem;    

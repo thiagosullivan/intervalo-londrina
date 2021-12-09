@@ -4,6 +4,10 @@ import styled from "styled-components";
 export const SocialMediaContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 500px){
+    /* justify-content: left; */
+  }
 `;
 
 export const SocialMediaIcon = styled.div`

@@ -2,6 +2,13 @@ import styled from "styled-components";
 
 export const TopHeadContainer = styled.div`
   position: relative;
+  
+  @media (max-width: 980px){
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 2rem;
+  }
 `;
 
 export const SearchBarContainer = styled.form`
@@ -12,6 +19,30 @@ export const SearchBarContainer = styled.form`
   width: 100%;
   height: 40px;
   display: flex;
+
+  @media (max-width: 1500px) {
+    right: -60px;
+  }
+
+  @media (max-width: 1370px) {
+    right: -120px;
+  }
+
+  @media (max-width: 1240px) {
+    top: -90px;
+    right: -60px;
+  }
+
+  @media (max-width: 1110px) {
+    right: 0px;
+  }  
+
+  @media (max-width: 980px){
+    position: relative;
+    top: unset;
+    right: unset;
+    margin-bottom: 2rem;
+  }
 
   > input {
     width: calc(100% - 50px);
