@@ -16,6 +16,10 @@ export const NewsletterContainer = styled.section`
     text-align: center;
   }
 
+  @media (max-width: 430px){
+    padding: 1rem;
+  }
+
   > p {
     font-family: 'Tinsel', sans-serif;
     font-size: 55px;
@@ -56,6 +60,16 @@ export const NewsletterContainer = styled.section`
       background: ${({ theme }) => theme.primary};
       border: 1px solid ${({ theme }) => theme.primary};
       color: #ffffff;
+
+      @media (max-width: 570px){
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 570px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 `;

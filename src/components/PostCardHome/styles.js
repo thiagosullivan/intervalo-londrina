@@ -88,6 +88,10 @@ export const IndividualCardContainer = styled.div`
     flex-direction: column;
   }
 
+  @media (max-width: 540px){
+    padding: 4rem 0 3.7rem;
+  }
+
   .card_first_info {
     display: flex;
     flex-direction: column;
@@ -157,6 +161,10 @@ export const IndividualCardContainer = styled.div`
         text-align: center;
         margin-top: 2rem;
       }
+
+      @media (max-width: 400px){
+        line-height: 57px;
+      }
     }
   }
 
@@ -213,5 +221,15 @@ export const ImgPost = styled.div`
 
     @media (max-width: 980px){
       margin: 3rem;
+    }
+
+    @media (max-width: 440px){
+      width: 320px;
+      height: 230px;
+    }
+
+    @media (max-width: 350px){
+      width: 280px;
+      height: 190px;
     }
 `;

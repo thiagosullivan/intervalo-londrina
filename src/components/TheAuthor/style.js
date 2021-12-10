@@ -9,6 +9,10 @@ export const TheAuthorContainer = styled.div`
 
   .author_img_container {
     margin-right: 70px;
+
+    @media (max-width: 980px){
+      margin-right: 25px;
+    }
   }
 
   > div {
@@ -21,6 +25,15 @@ export const TheAuthorContainer = styled.div`
       color: ${({ theme }) => theme.primary};
       text-transform: uppercase;
       letter-spacing: 20px;
+
+      @media (max-width: 850px){
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      @media (max-width: 430px){
+        font-size: 100px;
+      }
   
       span {
         font-family: 'Tinsel', sans-serif;
@@ -29,6 +42,10 @@ export const TheAuthorContainer = styled.div`
         color: ${({ theme }) => theme.primary};
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 2px;
+
+        @media (max-width: 430px){
+          font-size: 100px;
+        }
       }
     }
 
@@ -36,7 +53,11 @@ export const TheAuthorContainer = styled.div`
       text-align: justify;
       max-width: 950px;
       width: 100%;
-      line-height: 31px;
+      line-height: 31px;      
     }
+  }
+
+  @media (max-width: 850px){
+    flex-direction: column;
   }
 `;

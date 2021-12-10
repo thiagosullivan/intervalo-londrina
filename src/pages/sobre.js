@@ -8,6 +8,7 @@ import Newsletter from '../components/Newsletter'
 import TheAuthor from '../components/TheAuthor'
 import TheProject from '../components/TheProject'
 import TopHead from '../components/TopHead'
+import { AboutContainerPage } from '../styles/AboutPage'
 
 import { HomeContainer } from '../styles/HomeStyle'
 
@@ -26,14 +27,14 @@ export default function Home() {
       <Header />
       <BackgroundImg />
       <SideLine />
-      <HomeContainer>
+      <AboutContainerPage>
         <main className="container">
           <TopHead />
           <TheProject />
           <TheAuthor />
           <Newsletter />
         </main>
-      </HomeContainer>
+      </AboutContainerPage>
       <Footer />
     </div>
   )

@@ -4,6 +4,12 @@ export const ContactContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin: 10rem 0 15rem;
+
+  @media (max-width: 980px){
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+  }
 `;
 
 export const FormContainer = styled.form`
@@ -83,17 +89,31 @@ export const SquareContactContainer = styled.div`
   padding: 1.5rem 2rem 3rem;
   height: fit-content;
 
+  @media (max-width: 980px){
+    max-width: 400px;
+    width: 100%;
+    margin-top: 5rem;
+  }
+
   > h1 {
     font-family: 'Tinsel', sans-serif;
     font-size: 64px;
     font-weight: 500;
     color: ${({ theme }) => theme.primary};
     margin-bottom: 1rem;
+
+    @media (max-width: 410px){
+      text-align: center;
+    }
   }
 
   .contact_phone {
     display: flex;
     align-items: center;
+
+    @media (max-width: 410px){
+      flex-direction: column;
+    }
 
     svg {
       background-color: ${({ theme }) => theme.secondary};
@@ -103,9 +123,18 @@ export const SquareContactContainer = styled.div`
       height: 20px;
       width: 20px;
       margin-right: .5rem;
+
+      @media (max-width: 410px){
+        margin-right: 0;
+        margin-bottom: .5rem;
+      }
     }
     > p {
       color: ${({ theme }) => theme.secondary};
+      
+      @media (max-width: 325px){
+        font-size: 14px;
+      }
     }
   }
 
@@ -114,15 +143,28 @@ export const SquareContactContainer = styled.div`
     align-items: center;
     margin-bottom: 1rem;
 
+    @media (max-width: 410px){
+      flex-direction: column;
+    }
+
     svg {
       height: 23px;
       width: 23px;
       color: ${({ theme }) => theme.secondary};
       margin-right: .5rem;
+
+      @media (max-width: 410px){
+        margin-right: 0;
+        margin-bottom: .5rem;
+      }
     }
 
     > p {
       color: ${({ theme }) => theme.secondary};
+
+      @media (max-width: 325px){
+        font-size: 14px;
+      }
     }
   }
 `;

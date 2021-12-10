@@ -53,8 +53,8 @@ export default createGlobalStyle`
     @media(max-width:1000px) {
 
     }
-    @media(max-width:700px) {
-
+    @media(max-width:540px) {
+      padding: 7.5rem 1rem;
     }
   }
 

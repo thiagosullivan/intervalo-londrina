@@ -13,6 +13,12 @@ export const FooterContainer = styled.footer`
     width: 100%;
     margin: 0 auto;
 
+    img {
+      @media (max-width: 400px){
+        width: 200px !important;
+      }
+    }
+
     @media (max-width: 1500px){
       max-width: 1100px;
     }

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import BackgroundImg from '../components/BgSite'
 import SideLine from '../components/BgSite/SideLine'
 import Footer from '../components/Footer'
@@ -7,7 +7,8 @@ import ContactContent from '../components/FormContact'
 import Header from '../components/Header'
 import Newsletter from '../components/Newsletter'
 import TopHead from '../components/TopHead'
-import { HomeContainer } from '../styles/HomeStyle'
+
+import { ContactContainerPage, ContactPage } from '../styles/ContactPage';
 
 export default function Home() {
   return (
@@ -24,13 +25,13 @@ export default function Home() {
       <Header />
       <BackgroundImg />
       <SideLine />
-      <HomeContainer>
+      <ContactContainerPage>
         <main className="container">
           <TopHead />
           <ContactContent />   
           <Newsletter />
         </main>
-      </HomeContainer>
+      </ContactContainerPage>
       <Footer />
     </div>
   )
