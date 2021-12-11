@@ -6,6 +6,7 @@ import SocialMedia from '../SocialMedia';
 import { MdOutlineClose } from 'react-icons/md';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import Link from 'next/link';
 
 function Header(){
   const [ sidebar, setSidebar ] = useState(false);
@@ -21,7 +22,11 @@ function Header(){
         <div className="close_header" onClick={showSidebar}>
           <MdOutlineClose />
         </div>
-        <Image src={LogoLight} alt="Logo da Intervalo"/>
+        <Link href="/">
+          <a>
+            <Image src={LogoLight} alt="Logo da Intervalo"/>
+          </a>
+        </Link>
           <ul onClick={showSidebar}>
             <NavLink title="Blog" path="/" />
             <NavLink title="Sobre" path="/sobre" includes />

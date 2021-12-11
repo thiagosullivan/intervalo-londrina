@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Prismic from '@prismicio/client';
+import { useRouter } from "next/router";
+import { getPrismicClient } from "../../../services/prismic";
 
 import BackgroundImg from "../../../components/BgSite";
 import SideLine from "../../../components/BgSite/SideLine";
@@ -10,12 +12,10 @@ import CategoriesPosts from '../../../components/CategoriesPosts';
 import BlogPost from "../../../components/BlogPost";
 import SeeMore from "../../../components/SeeMore";
 import Header from "../../../components/Header";
-
-import { HomeContainer } from '../../../styles/HomeStyle';
-import { BlogPostContent } from "../../../styles/PostStyle";
-import { getPrismicClient } from "../../../services/prismic";
 import LoadingScreen from "../../../components/LoadingScreen";
-import { useRouter } from "next/router";
+
+import { BlogPostContent } from "../../../styles/PostStyle";
+import { SlugContainerPage } from "../../../styles/SlugPages";
 
 function Postagem({ post }) {
 
@@ -36,7 +36,7 @@ function Postagem({ post }) {
       <Header />
       <BackgroundImg />
       <SideLine />
-      <HomeContainer>
+      <SlugContainerPage>
         <main className="container">
           <TopHead />
           <CategoriesPosts />
@@ -53,7 +53,7 @@ function Postagem({ post }) {
           </BlogPostContent>
           <Newsletter />
         </main>
-      </HomeContainer>
+      </SlugContainerPage>
       <Footer />
     </div>
   )

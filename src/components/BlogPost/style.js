@@ -3,13 +3,46 @@ import styled from "styled-components";
 export const BlogPostContainer = styled.section`
   max-width: 815px;
   width: max-content;
-  /* padding-right: 4.6rem; */
   margin-bottom: 9.5rem;
+  margin-right: 2rem;
+
+  @media (max-width: 1500px){
+    /* margin-right: 0; */
+  }
+
+  @media (max-width: 980px){
+    margin-right: 0;
+  }
+
+  @media (max-width: 880px){
+    max-width: 700px;
+  }
+
+  @media (max-width: 750px){
+    max-width: 600px;
+  }
+
+  @media (max-width: 660px){
+    max-width: 500px;
+  }
+
+  @media (max-width: 530px){
+    max-width: 400px;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 420px){
+    max-width: 300px;
+  }
 
   .blog_post_img {
     margin: 0 auto;
     max-width: 815px;
     width: 100%;
+
+    @media (max-width: 660px){
+      max-width: 500px;
+    }
   }
 
   > h1 {
@@ -18,6 +51,15 @@ export const BlogPostContainer = styled.section`
     color: ${({ theme }) => theme.secondary};
     font-weight: 500;
     margin: 2rem 0;
+
+    @media (max-width: 750px){
+      font-size: 70px;
+      text-align: center;
+    }
+
+    @media (max-width: 530px){
+      font-size: 50px;
+    }
   }
 
   p {
@@ -34,4 +76,24 @@ export const PostImageContainer = styled.div`
   background-image: url(${props => props.imgUrl});
   background-position: center;
   background-size: cover;
+
+  @media (max-width: 880px){
+    max-width: 700px;
+  }
+
+  @media (max-width: 750px){
+    max-width: 600px;
+  }
+
+  @media (max-width: 660px){
+    max-width: 500px;
+  }
+
+  @media (max-width: 530px){
+    max-width: 400px;
+  }
+
+  @media (max-width: 420px){
+    max-width: 300px;
+  }
 `;

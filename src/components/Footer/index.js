@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logoFooter from '../../assets/intervalo-logo-footer.png'
 import logoPrefeitura from '../../assets/logo-prefeitura.png'
 import SocialMedia from "../SocialMedia";
@@ -8,10 +9,14 @@ function Footer() {
   return (
     <FooterContainer>
       <div className="footer_top">
-        <Image src={logoFooter} alt="Logo da Intervalo" />
+        <Link href="/">
+          <a>
+            <Image src={logoFooter} alt="Logo da Intervalo" />
+          </a>
+        </Link>
         <div className="footer_second_col">
           <div className="footer_prefeitura">
-            <p>Patrocínio</p>
+            <p>Patrocínio</p>              
             <Image src={logoPrefeitura} alt="Logo da Prefeitura de Londrina" />
           </div>
           <div className="footer_socialmedia">

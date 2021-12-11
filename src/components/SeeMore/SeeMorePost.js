@@ -5,10 +5,14 @@ import { ImgPost, SeeMorePostContainer } from "./style";
 function SeeMorePost({ title, imgLink, resume, category }) {
   return (
     <SeeMorePostContainer>
-      <ImgPost className="see_more_img" imgUrl={imgLink} />
-      <BlogPostInfo category={category} />
-      <h2>{title}</h2>
-      <p>{resume}</p>
+      <div className="see_more_col1">
+        <ImgPost className="see_more_img" imgUrl={imgLink} />
+        <BlogPostInfo category={category} />
+      </div>
+      <div className="see_more_col2">
+        <h2>{title}</h2>
+        <p>{resume}</p>
+      </div>
     </SeeMorePostContainer>
   )
 };

@@ -9,8 +9,8 @@ function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
   return (
     <BlogPostContainer>
       <div className="blog_post_img">
+        <PostImageContainer imgUrl={imgUrl} />
       </div>
-      <PostImageContainer imgUrl={imgUrl} />
       <BlogPostInfo category={categories} date={date} author={author}/>
       <h1>{postTitle}</h1>
       {RichText.render(text)}

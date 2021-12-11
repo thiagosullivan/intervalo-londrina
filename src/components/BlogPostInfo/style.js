@@ -5,6 +5,11 @@ export const BlogPostInfos = styled.div`
   justify-content: space-between;
   color: ${({ theme }) => theme.primary};
   margin-top: 1rem;
+  align-items: center;
+
+  @media (max-width: 420px){
+    flex-direction: column;
+  }
 
   > div {
     display: flex;
@@ -28,5 +33,9 @@ export const BlogPostInfos = styled.div`
     padding: 0.3rem 2.8rem;
     background: ${({ theme }) => theme.primary};
     color: #ffffff;
+
+    @media (max-width: 420px){
+      margin-top: 1rem;
+    }
   }
 `;

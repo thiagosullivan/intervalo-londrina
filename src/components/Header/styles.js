@@ -86,6 +86,10 @@ export const NavContainer = styled.nav`
     @media (max-width: 1440px){
       margin-top: 0px;
     }
+
+    @media (max-width: 520px){
+      max-height: 250px;
+    }
   }
 `;
 
