@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BlogPostContainer, PostImageContainer } from "./style";
 import BlogPostInfo from "../BlogPostInfo";
-// import { RichText } from "@graphcms/rich-text-react-renderer"
+import { RichText } from "@graphcms/rich-text-react-renderer"
 
 
 function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
