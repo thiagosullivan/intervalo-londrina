@@ -24,9 +24,9 @@ function CategoriesPosts() {
       <Link href="/blog/teatro" passHref>
         <LinkText pathName={router.pathname}>Teatro</LinkText>
       </Link>
-      <Link href="/blog/perifericos" passHref>
+      {/* <Link href="/blog/perifericos" passHref>
         <LinkText pathName={router.pathname}>#Perifericos</LinkText>
-      </Link>
+      </Link> */}
     </CategoriesPostsContainer>
   )
 }

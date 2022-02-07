@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Prismic from '@prismicio/client';
+// import Prismic from '@prismicio/client';
 import { useRouter } from "next/router";
-import { getPrismicClient } from "../../../services/prismic";
+// import { getPrismicClient } from "../../../services/prismic";
 
 import BackgroundImg from "../../../components/BgSite";
 import SideLine from "../../../components/BgSite/SideLine";
@@ -16,8 +16,13 @@ import LoadingScreen from "../../../components/LoadingScreen";
 
 import { BlogPostContent } from "../../../styles/PostStyle";
 import { SlugContainerPage } from "../../../styles/SlugPages";
+import { getPostDetails, getPosts } from "../../../services/graphcms";
 
 function Postagem({ post }) {
+
+  console.log(post, "slug page")
+
+  // const allPosts = [post];
 
   const router = useRouter();
 
@@ -43,15 +48,23 @@ function Postagem({ post }) {
           <BlogPostContent id="post_page_cont">
             <BlogPost
               postTitle={post.title}
-              categories={post.categories}
-              date={post.date}
-              author={post.author}
-              text={post.text}
-              imgUrl={post.image}
+              categories={post.category.name}
+              date={post.createdAt}
+              author={post.author.name}
+              text={post.content.markdown}
+              imgUrl={post.postImage.url}
             />
-            <SeeMore />
+            <SeeMore/>
+
+            
           </BlogPostContent>
           <Newsletter />
+          {/* {allPosts.map( postagens => (
+            <div>{postagens.title}
+            <p>Posts</p>
+          
+          </div>
+          ))} */}
         </main>
       </SlugContainerPage>
       <Footer />
@@ -61,49 +74,64 @@ function Postagem({ post }) {
 
 export default Postagem;
 
-export const getStaticPaths = async () => {
-  const prismic = getPrismicClient();
-  const projetos = await prismic.query([
-    Prismic.predicates.at('document.type', 'postagem')
-  ]);
+// export const getStaticPaths = async () => {
+//   const prismic = getPrismicClient();
+//   const projetos = await prismic.query([
+//     Prismic.predicates.at('document.type', 'postagem')
+//   ]);
 
-  const paths = projetos.results.map(projeto => ({
-    params: {
-      slug: projeto.uid
-    }
-  }));
+//   const paths = projetos.results.map(projeto => ({
+//     params: {
+//       slug: projeto.uid
+//     }
+//   }));
+
+//   return {
+//     paths,
+//     fallback: true,
+//   }
+// }
+
+// export const getStaticProps = async context => {
+//   const prismic = getPrismicClient();
+//   const { slug } = context.params;
+
+//   const response = await prismic.getByUID('postagem', String(slug), {});
+
+//   console.log(response)
+
+//   const post = {
+//     slug: response.slugs,
+//     resume: response.data.resume,
+//     title: response.data.title,
+//     author: response.data.author,
+//     date: response.data.date,
+//     categories: response.data.categories,
+//     image: response.data.image.url,
+//     alt: response.data.image.alt,
+//     text: response.data.text,
+//   }
+    
+//   return {
+//     props: {
+//       post
+//     },
+//     revalidate: 86400
+//   };
+// }
+
+export async function getStaticProps({ params }) {
+  const data = await getPostDetails(params.slug);
 
   return {
-    paths,
-    fallback: true,
+    props: { post: data }
   }
 }
 
-export const getStaticProps = async context => {
-  const prismic = getPrismicClient();
-  const { slug } = context.params;
-
-  const response = await prismic.getByUID('postagem', String(slug), {});
-
-  console.log(response)
-
-  const post = {
-    slug: response.slugs,
-    title: response.data.title,
-    author: response.data.author,
-    date: response.data.date,
-    categories: response.data.categories,
-    image: response.data.image.url,
-    alt: response.data.image.alt,
-    text: response.data.text,
-  }
-    
-    
-
+export async function getStaticPaths() {
+  const posts = await getPosts();
   return {
-    props: {
-      post
-    },
-    revalidate: 86400
+    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
+    fallback: true,
   };
 }

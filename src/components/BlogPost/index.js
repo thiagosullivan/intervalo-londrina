@@ -2,7 +2,8 @@ import Image from "next/image";
 import { BlogPostContainer, PostImageContainer } from "./style";
 // import postImg from '../../assets/blog-post-img.png';
 import BlogPostInfo from "../BlogPostInfo";
-import {RichText} from 'prismic-reactjs';
+import ReactMarkdown from "react-markdown";
+// import {RichText} from 'prismic-reactjs';
 
 
 function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
@@ -11,9 +12,10 @@ function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
       <div className="blog_post_img">
         <PostImageContainer imgUrl={imgUrl} />
       </div>
-      <BlogPostInfo category={categories} date={date} author={author}/>
+      <BlogPostInfo categories={categories} date={date} author={author}/>
       <h1>{postTitle}</h1>
-      {RichText.render(text)}
+      {/* {RichText.render(text)} */}
+      <ReactMarkdown children={text}/>
     </BlogPostContainer>
   )
 }

@@ -4,9 +4,9 @@ import { PostsHomeContainer } from './styles';
 import ReactPaginate from 'react-paginate';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 
-function PostCardHome({ postagens }) {
+function PostCardResults({ postagens }) {
 
-  console.log(postagens, "postagens")
+  console.log(postagens, "card resultados")
   const reversedPosts = postagens.map(postagem => postagem).reverse();
   
   const [pageNumber, setPageNumber] = useState(0);
@@ -27,7 +27,6 @@ function PostCardHome({ postagens }) {
           postLink={posts.node.slug}
           text={posts.node.content}
         />
-      // <div>{posts.node.title}</div>
     )
   })
 
@@ -36,8 +35,6 @@ function PostCardHome({ postagens }) {
   const changePage = ({ selected }) => {
     setPageNumber(selected)
   }
-
-  // const filterdPeople = postagens.filter(posts => posts.category == 'Dança')
   return (
     <PostsHomeContainer>
       {displayUsers}
@@ -52,18 +49,8 @@ function PostCardHome({ postagens }) {
         disabledClassName={"paginationDisabled"}
         activeClassName={"paginationActive"}
       />
-      {/* <div>
-            <p>{publicacao.title}</p>
-          </div> */}
-      {/* {publicacao.map((posts) => {
-        return (
-          <div>
-            <p>{posts.title}</p>
-          </div>
-        )
-      })} */}
     </PostsHomeContainer>
   )
 }
 
-export default PostCardHome;
+export default PostCardResults;
