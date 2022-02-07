@@ -4,6 +4,7 @@ import { BlogPostContainer, PostImageContainer } from "./style";
 import BlogPostInfo from "../BlogPostInfo";
 import ReactMarkdown from "react-markdown";
 // import {RichText} from 'prismic-reactjs';
+import { RichText } from "@graphcms/rich-text-react-renderer"
 
 
 function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
@@ -15,7 +16,7 @@ function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
       <BlogPostInfo categories={categories} date={date} author={author}/>
       <h1>{postTitle}</h1>
       {/* {RichText.render(text)} */}
-      <ReactMarkdown children={text}/>
+      <RichText content={text} />
     </BlogPostContainer>
   )
 }
