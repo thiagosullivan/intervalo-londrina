@@ -19,6 +19,8 @@ function SearchBar({
         router.push(`/resultados?s=${search}`)
 
         setTimeout(() => setIsSearchLoading(false), 600)
+
+        setSearch('')
       }}
     >
       <input

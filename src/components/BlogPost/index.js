@@ -12,7 +12,7 @@ function BlogPost({ postTitle, categories, date, author, text, imgUrl }) {
       </div>
       <BlogPostInfo categories={categories} date={date} author={author}/>
       <h1>{postTitle}</h1>
-      {/* <RichText content={text} /> */}
+      <RichText content={text} />
     </BlogPostContainer>
   )
 }
