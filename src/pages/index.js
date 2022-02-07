@@ -12,11 +12,7 @@ import PostCardHome from '../components/PostCardHome';
 import TopHead from '../components/TopHead';
 
 import { HomeContainer } from '../styles/HomeStyle';
-// import { getPrismicClient } from '../services/prismic';
-// import SeeMore from '../components/SeeMore';
-// import { getPrismicClient } from './services/prismic';
 import { getPosts } from '../services/graphcms';
-import PostTest from '../components/PostsTest';
 
 export default function Home({ posts }) {
   console.log(posts, "home")
@@ -45,7 +41,6 @@ export default function Home({ posts }) {
           </div>
           <PostCardHome postagens={posts} />
           {/* {posts.map((post) => <PostCardHome postagens={post.node} />)} */}
-          {/* {posts.map((post) => <PostTest postagens={post.node} />)} */}
           <Newsletter />
         </main>
         {/* <SeeMore postagens={postagens} /> */}
