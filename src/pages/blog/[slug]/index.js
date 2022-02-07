@@ -51,7 +51,7 @@ function Postagem({ post }) {
               categories={post.category.name}
               date={post.createdAt}
               author={post.author.name}
-              text={post.content.markdown}
+              text={post.content.raw}
               imgUrl={post.postImage.url}
             />
             <SeeMore/>
