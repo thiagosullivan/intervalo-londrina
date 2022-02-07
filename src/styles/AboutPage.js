@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const AboutContainerPage = styled.div`
-  max-width: 1500px;
+  max-width: 1365px;
   width: 100%;
   margin: 0 auto;
   position: relative;
   padding-left: 60px;
-  left: 80px;
+  /* left: 80px; */
 
   @media (max-width: 1560px){
     max-width: 1400px;

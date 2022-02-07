@@ -6,7 +6,7 @@ export const ContactContainerPage = styled.div`
   margin: 0 auto;
   position: relative;
   padding-left: 60px;
-  left: 80px;
+  /* left: 80px; */
 
   @media (max-width: 1500px){
     max-width: 1300px;

@@ -101,6 +101,7 @@ export const getPostDetails = async (slug) => {
         slug
         content {
           markdown
+          raw
         }
         category {
           name

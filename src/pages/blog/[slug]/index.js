@@ -1,7 +1,5 @@
 import Head from "next/head";
-// import Prismic from '@prismicio/client';
 import { useRouter } from "next/router";
-// import { getPrismicClient } from "../../../services/prismic";
 
 import BackgroundImg from "../../../components/BgSite";
 import SideLine from "../../../components/BgSite/SideLine";
@@ -21,8 +19,6 @@ import { getPostDetails, getPosts } from "../../../services/graphcms";
 function Postagem({ post }) {
 
   console.log(post, "slug page")
-
-  // const allPosts = [post];
 
   const router = useRouter();
 
@@ -54,17 +50,9 @@ function Postagem({ post }) {
               text={post.content.raw}
               imgUrl={post.postImage.url}
             />
-            <SeeMore/>
-
-            
+            <SeeMore/>            
           </BlogPostContent>
           <Newsletter />
-          {/* {allPosts.map( postagens => (
-            <div>{postagens.title}
-            <p>Posts</p>
-          
-          </div>
-          ))} */}
         </main>
       </SlugContainerPage>
       <Footer />
@@ -73,52 +61,6 @@ function Postagem({ post }) {
 }
 
 export default Postagem;
-
-// export const getStaticPaths = async () => {
-//   const prismic = getPrismicClient();
-//   const projetos = await prismic.query([
-//     Prismic.predicates.at('document.type', 'postagem')
-//   ]);
-
-//   const paths = projetos.results.map(projeto => ({
-//     params: {
-//       slug: projeto.uid
-//     }
-//   }));
-
-//   return {
-//     paths,
-//     fallback: true,
-//   }
-// }
-
-// export const getStaticProps = async context => {
-//   const prismic = getPrismicClient();
-//   const { slug } = context.params;
-
-//   const response = await prismic.getByUID('postagem', String(slug), {});
-
-//   console.log(response)
-
-//   const post = {
-//     slug: response.slugs,
-//     resume: response.data.resume,
-//     title: response.data.title,
-//     author: response.data.author,
-//     date: response.data.date,
-//     categories: response.data.categories,
-//     image: response.data.image.url,
-//     alt: response.data.image.alt,
-//     text: response.data.text,
-//   }
-    
-//   return {
-//     props: {
-//       post
-//     },
-//     revalidate: 86400
-//   };
-// }
 
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
