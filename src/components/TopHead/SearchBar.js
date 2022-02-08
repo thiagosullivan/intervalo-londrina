@@ -37,9 +37,9 @@ function SearchBar({
           <IoIosSearch />
         </button>
       </SearchBarContainer>
-      <div className="loader-search-container">
+      {/* <div className="loader-search-container">
         {isSearchLoading && <LoadingSearchScreen />}
-      </div>
+      </div> */}
     </SearchBarContainerFather>
   )
 }
