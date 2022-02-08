@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Author from '../../assets/isabela-photo.png';
+import Author from '../../assets/isabela-photo.webp';
 import { TheAuthorContainer } from './style';
 
 function TheAuthor() {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { TheProjectContainer } from "./style";
 // import firstPhoto from '../../assets/contact-woman.jpg';
-import firstPhoto from '../../assets/contact-woman.png';
+import firstPhoto from '../../assets/contact-woman.webp';
 
 function TheProject() {
   return (

@@ -11,6 +11,16 @@ export const TopHeadContainer = styled.div`
   }
 `;
 
+export const SearchBarContainerFather = styled.div`
+  /* position: relative; */
+
+  .loader-search-container {
+    position: absolute;
+    right: 9rem;
+    top: 0;
+  }
+`
+
 export const SearchBarContainer = styled.form`
   position: absolute;
   right: 0;

@@ -8,12 +8,12 @@ function PostCardHome({ postagens }) {
 
   console.log(postagens, "postagens")
   const reversedPosts = postagens.map(postagem => postagem).reverse();
+  console.log(reversedPosts, "postagens")
   
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 4;
   const pagesVisited = pageNumber * usersPerPage;
-
   const displayUsers = reversedPosts.slice(pagesVisited, pagesVisited + usersPerPage).map((posts) => {
     return (
       <PostIndividualCardHome
@@ -27,7 +27,6 @@ function PostCardHome({ postagens }) {
           postLink={posts.node.slug}
           text={posts.node.content}
         />
-      // <div>{posts.node.title}</div>
     )
   })
 
@@ -41,27 +40,19 @@ function PostCardHome({ postagens }) {
   return (
     <PostsHomeContainer>
       {displayUsers}
-      <ReactPaginate
-        previousLabel={<MdArrowBackIos />}
-        nextLabel={<MdArrowForwardIos />}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={"paginationBtns"}
-        previousClassName={"previousBtn"}
-        nextLinkClassName={"nextBtn"}
-        disabledClassName={"paginationDisabled"}
-        activeClassName={"paginationActive"}
-      />
-      {/* <div>
-            <p>{publicacao.title}</p>
-          </div> */}
-      {/* {publicacao.map((posts) => {
-        return (
-          <div>
-            <p>{posts.title}</p>
-          </div>
-        )
-      })} */}
+      {reversedPosts.length >= 4 &&
+        <ReactPaginate
+          previousLabel={<MdArrowBackIos />}
+          nextLabel={<MdArrowForwardIos />}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationBtns"}
+          previousClassName={"previousBtn"}
+          nextLinkClassName={"nextBtn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
+      }
     </PostsHomeContainer>
   )
 }

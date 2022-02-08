@@ -16,6 +16,8 @@ import TopHead from '../components/TopHead';
 
 import { HomeContainer } from '../styles/HomeStyle';
 import PostCardResults from '../components/PostCardResults';
+import { ResultContainerPage } from '../styles/ResultPage';
+import Link from 'next/link';
 
 
 
@@ -78,45 +80,24 @@ function ResultsPage({ posts }) {
       <HomeContainer>
         <main className="container">
           <TopHead />
-          {/* <CategoriesPosts /> */}
           <div className="home_subtitle">
             <div className="sub_line"></div>
             <h1>Resultados</h1>
             <div className="sub_line"></div>
           </div>
-          {filteredPosts.length === 0 && (
-            <p>
-              Sorry. Post not founded.
-            </p>
-          )}
-          <PostCardResults postagens={filteredPosts} />
-
-          {/* {filteredPosts.map(post => (
-
-            // console.log(post, "posts filtrado dentro do map")
+          <ResultContainerPage>
+            {filteredPosts.length === 0 && (
+              <div className='Search__error'>
+                <p>Desculpe, mas nenhuma publicação foi encontrada nessa busca.</p>
+                <Link href="/">Voltar para a Home</Link>
+              </div>
+            )}
             <PostCardResults postagens={filteredPosts} />
-            // <PostCardHome
-            //   key={post.node.title}
-            //   postagens={post.node}
-            // />
-              // <LatestCard
-              //   key={post.id}
-              //   id={post.id}
-              //   title={post.title}
-              //   description={post.description}
-              //   image={post.image}
-              //   createdAt={post.createdAt}
-              //   author={post.author}
-              // />
-              // <div>
-              //   <p key={post.node.title}>{post.node.title}</p>
-              //   <img src={post.node.postImage.url} />
-              // </div>
-            ))}           */}
-          {/* {posts.map((post) => <PostCardHome postagens={post.node} />)} */}
+          </ResultContainerPage>
+
+          
           <Newsletter />
         </main>
-        {/* <SeeMore postagens={postagens} /> */}
       </HomeContainer>
       <Footer />    
     </div>

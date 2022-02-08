@@ -1,6 +1,7 @@
-import { SearchBarContainer } from "./style";
+import { SearchBarContainer, SearchBarContainerFather } from "./style";
 import { IoIosSearch } from 'react-icons/io';
 import { useRouter } from "next/router";
+import LoadingSearchScreen from "../LoadingScreenSearch";
 
 function SearchBar({
   search,
@@ -11,28 +12,35 @@ function SearchBar({
 
   const router = useRouter()
   return (
-    <SearchBarContainer
-      onSubmit={event => {
-        event.preventDefault()
-        setIsSearchLoading(true)
+    <SearchBarContainerFather>
+      <SearchBarContainer
+        onSubmit={event => {
+          event.preventDefault()
+          setIsSearchLoading(true)
 
-        router.push(`/resultados?s=${search}`)
+          router.push(`/resultados?s=${search}`)
 
-        setTimeout(() => setIsSearchLoading(false), 600)
+          setTimeout(() => setIsSearchLoading(false), 400)
 
-        setSearch('')
-      }}
-    >
-      <input
-        placeholder="Pesquisar"
-        type="text"
-        value={search}
-        onChange={event => setSearch(event.target.value)}
-      />
-      <button type="submit">
-        <IoIosSearch />
-      </button>
-    </SearchBarContainer>
+          setSearch('')
+        }}
+      > 
+       
+       
+        <input
+          placeholder="Pesquisar"
+          type="text"
+          value={search}
+          onChange={event => setSearch(event.target.value)}
+        />
+        <button type="submit">
+          <IoIosSearch />
+        </button>
+      </SearchBarContainer>
+      <div className="loader-search-container">
+        {isSearchLoading && <LoadingSearchScreen />}
+      </div>
+    </SearchBarContainerFather>
   )
 }
 

@@ -68,6 +68,25 @@ export const BlogPostContainer = styled.section`
     line-height: 24px;
     margin-bottom: 1rem;
   }
+
+  blockquote {
+    border-left: 5px solid orange;
+    padding: 2rem 0 2rem 1rem;
+    background-color: rgba(0,0,0,.030);
+    margin: .5rem 1rem;
+  }
+
+  blockquote:after {
+      content: '"';
+      font-size: 2rem;
+      font-weight: 600;
+  }
+
+  blockquote:before {
+      content: '"';
+      font-size: 2rem;
+      font-weight: 600;
+  }
 `;
 
 export const PostImageContainer = styled.div`

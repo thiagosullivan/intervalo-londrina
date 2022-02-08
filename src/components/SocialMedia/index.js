@@ -16,7 +16,7 @@ function SocialMedia(){
       </SocialMediaIcon>
       <SocialMediaIcon>
         <FaInstagram
-          onClick={() => handleRedirect("https://instagram.com")}
+          onClick={() => handleRedirect("https://www.instagram.com/intervalolondrina/")}
         />
       </SocialMediaIcon>
       <SocialMediaIcon>

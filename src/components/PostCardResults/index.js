@@ -38,17 +38,20 @@ function PostCardResults({ postagens }) {
   return (
     <PostsHomeContainer>
       {displayUsers}
-      <ReactPaginate
-        previousLabel={<MdArrowBackIos />}
-        nextLabel={<MdArrowForwardIos />}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={"paginationBtns"}
-        previousClassName={"previousBtn"}
-        nextLinkClassName={"nextBtn"}
-        disabledClassName={"paginationDisabled"}
-        activeClassName={"paginationActive"}
-      />
+      {displayUsers.length >= 4 &&
+        <ReactPaginate
+          previousLabel={<MdArrowBackIos />}
+          nextLabel={<MdArrowForwardIos />}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationBtns"}
+          previousClassName={"previousBtn"}
+          nextLinkClassName={"nextBtn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
+      }
+      
     </PostsHomeContainer>
   )
 }
