@@ -20,41 +20,63 @@ export const NewsletterContainer = styled.section`
     padding: 1rem;
   }
 
-  > p {
-    font-family: 'Tinsel', sans-serif;
-    font-size: 55px;
-    font-weight: 500;
-    color: #ffffff;
-
+  .NewsletterSucess,
+  .Newsletter_title label {
+  font-family: 'Tinsel', sans-serif;
+  font-size: 55px;
+  font-weight: 500;
+  color: #ffffff;
+  max-width: unset;
+  
     @media (max-width: 980px){
       margin-bottom: 2rem;
     }
   }
   
-  > form {
-    max-width: 400px;
-    width: 100%;
+  .Newsletter_title {
+    margin-bottom: 1rem;
+  }
 
-    > input {
-      max-width: 300px;
+  > .Form_newsletter {
+    display: flex;
+    flex-direction: column;
+
+    .newsletter_inputs {
+      display: flex;
       width: 100%;
-      height: 40px;
-      border: 1px solid ${({ theme }) => theme.primary};
-      padding-left: 1.1rem;
-      background: transparent;
-      color: #ffffff;
-      outline: ${({ theme }) => theme.primary};
 
-      &::placeholder {
-        color: #ffffff;
+      @media (max-width: 570px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
+    }
+    
+    p {
+      width: 100%;
 
-      &:focus {
-        box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+      #tlemail {
+        /* max-width: 300px; */
+        width: 100%;
+        height: 40px;
+        border: 1px solid ${({ theme }) => theme.primary};
+        padding-left: 1.1rem;
+        background: transparent;
+        color: #ffffff;
+        outline: ${({ theme }) => theme.primary};
+        
+
+        &::placeholder {
+          color: #ffffff;
+        }
+
+        &:focus {
+          box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+        }
       }
     }
 
-    > button {
+    .buttonNewsletter {
       width: 100px;
       height: 40px;
       background: ${({ theme }) => theme.primary};
@@ -64,12 +86,6 @@ export const NewsletterContainer = styled.section`
       @media (max-width: 570px){
         margin-top: 1rem;
       }
-    }
-
-    @media (max-width: 570px){
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    }    
   }
 `;
