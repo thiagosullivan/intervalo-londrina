@@ -5,6 +5,8 @@ const theme = {
   grey: '#F7F7F6',
   greysecond: '#E1E1E1',
   white: '#FFFFFF',
+  error: '#D45D5D',
+  success: '#6fd45d'
 };
 
 export default theme;
