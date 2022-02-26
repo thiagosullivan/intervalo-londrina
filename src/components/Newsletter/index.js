@@ -36,7 +36,7 @@ function Newsletter() {
   }
 
   const [ newsletterSucess, setNewsletterSucess] = useState(false)
-  console.log(email)
+  console.log(email) 
 
   return (
     
