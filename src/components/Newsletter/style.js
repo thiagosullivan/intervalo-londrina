@@ -53,6 +53,10 @@ export const NewsletterContainer = styled.section`
         flex-direction: column;
         align-items: center;
       }
+    }
+    
+    p {
+      width: 100%;
 
       > input {
         display: flex;
