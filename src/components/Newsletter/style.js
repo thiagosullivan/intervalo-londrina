@@ -55,23 +55,19 @@ export const NewsletterContainer = styled.section`
       }
     }
     
-    p {
+    input {
+      display: flex;
       width: 100%;
+      border: 1px solid ${({ theme }) => theme.primary};
+      background-color: transparent;
+      padding-left: 1.1rem;
+      color: ${({ theme }) => theme.white};
+      outline: ${({ theme }) => theme.primary};
+      height: 40px;
 
-      > input {
-        display: flex;
-        width: 100%;
-        border: 1px solid ${({ theme }) => theme.primary};
-        background-color: transparent;
-        padding-left: 1.1rem;
+      &::placeholder {
         color: ${({ theme }) => theme.white};
-        outline: ${({ theme }) => theme.primary};
-        height: 40px;
-
-        &::placeholder {
-          color: ${({ theme }) => theme.white};
-        }        
-      }
+      }        
     }
   }
   
