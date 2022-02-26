@@ -13,7 +13,7 @@ export const AboutContainerPage = styled.div`
   }
   
   @media (max-width: 1460px){
-    left: 120px;
+    /* left: 120px; */
   }
 
   @media (max-width: 1310px){
@@ -21,7 +21,7 @@ export const AboutContainerPage = styled.div`
   }
 
   @media (max-width: 1100px){
-    left: 80px;
+    /* left: 80px; */
   }
 
   @media (max-width: 980px){

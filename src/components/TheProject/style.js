@@ -11,14 +11,32 @@ export const TheProjectContainer = styled.section`
     left: 0;
     top: 6.25rem;
 
+    @media (max-width: 1590px){
+      left: 3rem;
+    }
+
+    @media (max-width: 1450px){
+      left: 5rem;
+    }
+
+    @media (max-width: 1310px){
+      left: 2.5rem;
+    }
+
     > div {
       position: absolute;
       z-index: 1;
       left: -115px;
       top: 105px;
 
+      @media (max-width: 1590px){
+        top: 35px;
+        left: -75px;
+      }
+
       @media (max-width: 1310px){
         top: 35px;
+        left: -45px;
       }
 
       @media (max-width: 1100px){
@@ -77,14 +95,24 @@ export const TheProjectContainer = styled.section`
       }
     }
 
-    @media (max-width: 1480px){
-      width: 654px;
-      height: 521px;
+    @media (max-width: 1590px){
+      width: 610px;
+      height: 499px;
     }
 
-    @media (max-width: 1310px){
-      width: 554px;
-      height: 421px;
+    @media (max-width: 1380px){
+      width: 549px;
+      height: 449px;
+    }
+
+    @media (max-width: 1185px){
+      width: 494px;
+      height: 404px;
+    }
+
+    @media (max-width: 1125px){
+      width: 444px;
+      height: 363px;
     }
 
     @media (max-width: 980px){
@@ -92,7 +120,8 @@ export const TheProjectContainer = styled.section`
       height: 471px;
 
       position: relative;
-      margin-right: auto;
+      /* margin-right: auto; */
+      left: 0;
     }
 
     @media (max-width: 565px){
@@ -121,10 +150,18 @@ export const TheProjectContainer = styled.section`
       max-width: 600px;
     }
 
+    @media (max-width: 1080px){
+      padding: 4.6rem 2.3rem 4.6rem 0;
+    }
+
+    @media (max-width: 1080px){
+      padding: 4.6rem 1.5rem 4.6rem 0;
+    }    
+
     @media (max-width: 980px){
       margin-top: 0;
-      margin-left: auto;
-      padding-left: 3.3rem;
+      /* margin-left: auto; */
+      padding-left: 1.5rem;
     }
 
     @media (max-width: 430px){
@@ -142,8 +179,16 @@ export const TheProjectContainer = styled.section`
       padding-right: 1rem;
       line-height: 30px;
 
+      @media (max-width: 1245px){
+        max-width: 425px;
+      }
+
       @media (max-width: 1200px){
         max-width: 400px;
+      }
+
+      @media (max-width: 1050px){
+        max-width: 345px;
       }
 
       @media (max-width: 980px){
@@ -166,9 +211,10 @@ export const TheProjectContainer = styled.section`
       }
     }
   }
-
+  
   @media (max-width: 980px){
     flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 560px){

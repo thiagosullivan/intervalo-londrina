@@ -10,7 +10,10 @@ function TheAuthor() {
       </div>
       <div className="author_text_container">
         <h2>A <span>Autora</span></h2>
-        <p>A música Construção, de Chico Buarque, é um grande manifesto poético e político da música popular brasileira. O jogo de palavras e a temática proposta pela canção tornam-a um marco do cenário musical brasileiro da década de 1970. Chico Buarque, com então 27 anos de idade, atingiu a muitos públicos com a música, agradando a diferentes gostos durante um período de intensa censura e tensão política na ditadura militar. Com Chico Buarque, Construção atingiu o topo das paradas nas rádios de todo o país e atravessou gerações, sendo uma música de grande relevância e prestigiada até os dias de hoje!</p>
+        <p>Oi, eu sou Isabela Cunha e este é o Intervalo, um site criado por mim – e com a ajuda de muitas mãos - para falar sobre a produção cultural londrinense.</p>
+        <p>Sou jornalista de formação e a razão por que escolhi o Jornalismo foi justamente o desejo de escrever sobre cultura. Lá atrás, em 2009, achei que escrever sobre música e os meus ídolos poderia ser uma boa profissão. Mas a vida é real e de viés, você sabe, de modo que eu nunca cheguei a trabalhar como jornalista, mas sempre atuei na área da cultura.</p>
+        <p>Na prática, sou produtora cultural, programadora de espaços culturais e assessora de imprensa em projetos culturais. Hoje, dirijo o Céu Aberto – Festival de Música e Pensamento, faço parte da Vila Cultura Canto do Marl, e também sou mestranda em Comunicação &#40;onde estudo a crise do capitalismo&#41;.</p>
+        <p>O que escrevo em Intervalo é uma mistura de dois desejos: o primeiro você já sabe, exercitar a escrita sobre arte; Mas o segundo é mais importante: abrir espaços de diálogo e reflexão sobre o que ainda pode nos emocionar.</p>
       </div>
     </TheAuthorContainer>
   )

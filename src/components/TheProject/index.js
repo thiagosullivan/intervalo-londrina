@@ -11,13 +11,31 @@ function TheProject() {
           <div className="project_border" />
           <h2>O<br/> <span>Projeto</span></h2>
         </div>
-        <Image src={firstPhoto} width={754} height={617} alt="Foto ilustrativa"/>
+        <Image src={firstPhoto} width={678} height={555} alt="Foto ilustrativa"/>
       </div>
       <div className="project_text">
-        <p>A música Construção, de Chico Buarque, é um grande manifesto poético e político da música popular brasileira. O jogo de palavras e a temática proposta pela canção tornam-a um marco do cenário musical brasileiro da década de 1970. Chico Buarque, com então 27 anos de idade, atingiu a muitos públicos com a música, agradando a diferentes gostos durante um período de intensa censura e tensão política na ditadura militar. Com Chico Buarque, Construção atingiu o topo das paradas nas rádios de todo o país e atravessou gerações, sendo uma música de grande relevância e prestigiada até os dias de hoje!
+        <p>Intervalo é um projeto que poderia não existir. A vida da maioria das pessoas acontece muito bem, obrigada, com ou sem a publicação de textos críticos, com ou sem a atividade do jornalismo cultural. Aliás, arte para quê? Crítica para quem? Diálogo por onde?
           <br/>
           <br/>
-        Apesar da letra crítica de Construção, Chico Buarque conseguiu aprovar o uso da mesma sem problemas com o departamento de censura do governo da ditadura militar. O significado da música Construção reflete um país cuja desigualdade social, a alienação política da classe trabalhadora e o descaso com a morte do próximo são temas presentes em meio à interpretação da música no contexto da época. A música Construção, de Chico Buarque, é um grande manifesto poético e político da música popular brasileira. O jogo de palavras e a temática proposta pela canção tornam-a um marco do cenário musical brasileiro da década de 1970. Chico Buarque, com então 27 anos de idade, atingiu a muitos públicos com a música, agradando a diferentes gostos durante um período de intensa censura e tensão política na ditadura militar. Com Chico Buarque, Construção atingiu o topo das paradas nas rádios de todo o país e atravessou gerações, sendo uma música de grande relevância e prestigiada até os dias de hoje! Apesar da letra crítica de Construção, Chico Buarque conseguiu aprovar o uso da mesma sem problemas com o departamento de censura do governo da ditadura militar. O significado da música Construção reflete um país cuja desigualdade social, a alienação política da classe trabalhadora e o descaso com a morte do próximo são temas presentes em meio à interpretação da música no contexto da época.
+          Mas é triste, né, descrever o mundo desse jeito - porque é triste, também, imaginá-lo pintado assim: um pequeno enredo de rotina produtiva alternado com descanso, um grande parque onde as pessoas se isolam.
+          <br/>
+          <br/>
+          Intervalo é um espaço de observador. O que faz Intervalo não é muito diferente do que faria um casal depois de assistir a um filme, ou do que faz um grupo de amigos depois de uma batalha de rima.
+          <br/>
+          <br/>
+          Diante da realidade árida, grupos, indivíduos, coletivos e empreendimentos seguem fazendo arte em Londrina. E o que nós fazemos aqui é justamente olhar e conversar um pouco sobre essa produção.
+          <br/>
+          <br/>
+          Com interesse em derrubar o muro que distingue o “periférico” do “central” ou o “erudito” do “popular”, nos interessa principalmente que esse espaço não seja restrito, que não seja inacessível, nem exclusivo de um grupo ou de uma linguagem.
+          <br/>
+          <br/>
+          Na contramão do mundo cinza, Intervalo quer reforçar a importância da fruição cultural. Contra a aridez do nosso tempo, apostamos em fortalecer o espaço público de debate.
+          <br/>
+          <br/>
+          Assista, leia, compartilhe, envie seu texto. Faz um intervalo!  Quanto mais participativo, melhor!
+          <br/>
+          <br/>
+          <span><strong>Intervalo Londrina é um projeto financiado pelo programa municipal de incentivo á cultura, o PROMIC, de Londrina.</strong></span>
         </p>
       </div>
     </TheProjectContainer>

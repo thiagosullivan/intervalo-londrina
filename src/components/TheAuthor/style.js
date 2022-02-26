@@ -15,6 +15,10 @@ export const TheAuthorContainer = styled.div`
     }
   }
 
+  .author_text_container p {
+    margin-bottom: 10px;
+  }
+
   > div {
     
     
