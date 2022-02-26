@@ -17,7 +17,14 @@ export const FormContainer = styled.form`
   flex-direction: column;
   max-width: 400px;
   width: 100%;
+  position: relative;
 
+  .loader-form-contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
   h1 {
     font-family: 'Tinsel', sans-serif;
     font-size: 64px;
@@ -38,6 +45,22 @@ export const FormContainer = styled.form`
       color: ${({ theme }) => theme.primary};
       background: transparent;
     }
+
+    @media screen and (max-width: 410px){
+      width: 100%;
+    }    
+  }
+
+  .disabled-btn {
+    cursor: not-allowed;
+
+    &:hover {
+        background: #E58F35 !important;
+        color: #ffffff !important;
+    }
+  }
+  .disabled-input {
+    pointer-events: none !important;
   }
 `;
 
@@ -58,7 +81,7 @@ export const Input = styled.input`
 
   &:focus {
     box-shadow: 1px 1px 5px rgba(0,0,0,.2);
-  }
+  }  
 `;
 
 export const TextArea = styled.textarea`

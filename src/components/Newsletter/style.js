@@ -46,6 +46,13 @@ export const NewsletterContainer = styled.section`
 
     .formInputs {
       display: flex;
+      align-items: center;
+
+      @media (max-width: 570px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
       > input {
         display: flex;
@@ -55,15 +62,11 @@ export const NewsletterContainer = styled.section`
         padding-left: 1.1rem;
         color: ${({ theme }) => theme.white};
         outline: ${({ theme }) => theme.primary};
+        height: 40px;
 
         &::placeholder {
           color: ${({ theme }) => theme.white};
-        }
-        @media (max-width: 570px){
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
+        }        
       }
     }
   }

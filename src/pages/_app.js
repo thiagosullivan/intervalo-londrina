@@ -3,6 +3,7 @@ import theme from '../styles/theme';
 import GlobalStyles from '../styles/globals';
 import Head from 'next/head';
 import NextNProgress from 'nextjs-progressbar';
+import {Toaster} from 'react-hot-toast';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -20,6 +21,8 @@ export default function App({ Component, pageProps }) {
           height={3}
           showOnShallow
         />
+
+        <Toaster position="bottom-right" />
         <GlobalStyles />
         <Component {...pageProps} />
       </ThemeProvider>
