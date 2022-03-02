@@ -40,7 +40,7 @@ function PostCardHome({ postagens }) {
   return (
     <PostsHomeContainer>
       {displayUsers}
-      {reversedPosts.length >= 4 &&
+      {reversedPosts.length > 4 &&
         <ReactPaginate
           previousLabel={<MdArrowBackIos />}
           nextLabel={<MdArrowForwardIos />}
