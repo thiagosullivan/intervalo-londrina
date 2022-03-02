@@ -11,7 +11,7 @@ function SocialMedia(){
     <SocialMediaContainer>
       <SocialMediaIcon>
         <FaFacebookF
-          onClick={() => handleRedirect("https://facebook.com")}
+          onClick={() => handleRedirect("https://www.facebook.com/Intervalo-Londrina-113752527906813")}
         />
       </SocialMediaIcon>
       <SocialMediaIcon>
@@ -21,7 +21,7 @@ function SocialMedia(){
       </SocialMediaIcon>
       <SocialMediaIcon>
         <FaYoutube
-          onClick={() => handleRedirect("https://youtube.com")}
+          onClick={() => handleRedirect("https://www.youtube.com/channel/UCFLRV7HUXbbXtF2KGSd2DVg ")}
         />
       </SocialMediaIcon>
     </SocialMediaContainer>
