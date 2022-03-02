@@ -24,14 +24,14 @@ export default function Home() {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:url" content="https://www.intervalolondrina.com.br/" />
         <meta property="og:title" content="Intervalo Londrina" />
         <meta property="og:description" content="Jornalismo cultural e crítica de arte em Londrina" />
         <meta property="og:image" content="https://i.ibb.co/wRXS4t1/intervalo-londrina-metatag-img.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:url" content="https://www.intervalolondrina.com.br/" />
         <meta property="twitter:title" content="Intervalo Londrina" />
         <meta property="twitter:description" content="Jornalismo cultural e crítica de arte em Londrina" />
         <meta property="twitter:image" content="https://i.ibb.co/wRXS4t1/intervalo-londrina-metatag-img.jpg"></meta>
