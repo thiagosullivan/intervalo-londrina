@@ -29,7 +29,7 @@ function Postagem({ post }) {
   return (
     <div id="post_page">
       <Head>
-        <title>{post.title}</title>
+        <title>{post.title} | Intervalo Londrina </title>
         <meta name="description" content={post.resume} />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:image" content={post.postImage.url} />
