@@ -87,6 +87,10 @@ export const BlogPostContainer = styled.section`
       font-size: 2rem;
       font-weight: 600;
   }
+
+  .Post_richtext img {
+    height: auto;
+  }
 `;
 
 export const PostImageContainer = styled.div`
