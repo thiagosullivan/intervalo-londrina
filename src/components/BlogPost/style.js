@@ -10,6 +10,10 @@ export const BlogPostContainer = styled.section`
     /* margin-right: 0; */
   }
 
+  @media (max-width: 1240px) {
+    max-width: 70%;
+  }
+
   @media (max-width: 980px){
     margin-right: 0;
   }
@@ -47,10 +51,11 @@ export const BlogPostContainer = styled.section`
 
   > h1 {
     font-family: 'Tinsel', sans-serif;
-    font-size: 85px;
+    font-size: 75px;
     color: ${({ theme }) => theme.secondary};
     font-weight: 500;
     margin: 2rem 0;
+    line-height: 0.9;
 
     @media (max-width: 750px){
       font-size: 70px;
@@ -99,6 +104,10 @@ export const PostImageContainer = styled.div`
   background-image: url(${props => props.imgUrl});
   background-position: center;
   background-size: cover;
+
+  @media (max-width: 1240px) {
+    width: 100%;
+  }
 
   @media (max-width: 880px){
     max-width: 700px;
