@@ -25,7 +25,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <p className="footer_credits">Criado e desenvolvido por Céu Aberto - Londrina/PR</p>
+      <p className="footer_credits">Criado e desenvolvido por Intervalo Londrina - Londrina/PR</p>
     </FooterContainer>
   )
 }
